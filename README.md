@@ -1,6 +1,6 @@
 # R3.01 DÉVELOPPEMENT WEB - Projet TutoFlask
 
-## Résumé premiere séance :
+## Résumé premiere séance :
 
 - creation d'un environnement virtuel pour installer toute dependance python
 - installation de Flask
