@@ -2,9 +2,24 @@
 
 ## Résumé premiere séance :
 
-- creation d'un environnement virtuel pour installer toute dependance python
-- installation de Flask
-- creation d'une architecture pour bien structurer l'application
-- on a appris a faire un requirements.txt
-- on a commencer a voir comment fonctionne flask et comment marche les routes
-- nous avons vu comment créer des pages en python
+- Création d’un environnement virtuel pour gérer les dépendances Python
+
+- Installation de Flask et configuration de l’application
+
+- Mise en place d’une architecture claire pour structurer le projet
+
+- Apprentissage de la création d’un fichier requirements.txt pour les dépendances
+
+- Découverte du fonctionnement de Flask et des routes
+
+- Initiation à la création de pages web dynamiques en Python
+
+## Résumé deuxième séance :
+
+- Nous avons vu comment connecter une base de données à Flask à l’aide de SQLAlchemy.
+
+- Nous avons appris à créer des modèles Python représentant les tables de la base de données.
+
+- Nous avons vu comment peupler la base de données automatiquement à partir d’un fichier YAML.
+
+- Nous avons utilisé Flask Shell pour afficher, récupérer, modifier et supprimer des données de la base.
