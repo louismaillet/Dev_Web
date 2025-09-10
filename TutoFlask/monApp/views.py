@@ -1,4 +1,4 @@
-from .App import app
+from . import app
 from config import ABOUT
 
 @app.route('/')
