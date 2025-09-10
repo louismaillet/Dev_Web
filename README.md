@@ -23,3 +23,7 @@
 - Nous avons vu comment peupler la base de données automatiquement à partir d’un fichier YAML.
 
 - Nous avons utilisé Flask Shell pour afficher, récupérer, modifier et supprimer des données de la base.
+
+## Résumé troisième séance :
+
+- Nous avons vu comment mettre en relation une page html et css avec python et flask 

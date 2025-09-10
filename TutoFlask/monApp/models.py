@@ -19,11 +19,13 @@ class Livre(db.Model):
 
     auteur_id = db.Column(db.Integer, db.ForeignKey("auteur.idA"))
     auteur = db.relationship ("Auteur", backref =db.backref ("livres", lazy="dynamic") )
+    
     def __init__(self, Prix, Titre, Url, Img, auteur_id):
         self.Prix = Prix
         self.Titre = Titre
         self.Url = Url
         self.Img = Img
         self.auteur_id = auteur_id
+
     def __repr__ (self ):
         return "<Livre (%d) %s>" % (self.idL , self.Titre)
