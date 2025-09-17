@@ -1,10 +1,6 @@
-<!doctype html >
-<html>
-    <head>
-        <title>{{title}}</title>
-        <link rel="stylesheet" href="{{ url_for ('static', filename ='style.css') }}">
-    </head>
+{% extends "base.html" %}
+{% block main %}
     <body >
-        <h1> Bienvenu {{name}} !!</h1>
+        <h1>Bienvenuuuu {{name}} !!</h1>
     </body >
-</html >
+{% endblock %}

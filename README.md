@@ -27,3 +27,12 @@
 ## Résumé troisième séance :
 
 - Nous avons vu comment mettre en relation une page html et css avec python et flask 
+
+## Résumé quatrième séance :
+
+- Nous avons vu comment afficher des images stockées dans un dossier static ( pas encore fini manque que a ajouter le lien et l'url)
+
+- Nous avons vu comment faire une base en html pour la reutiliser dans plusieurs pages ( base.html)
+
+- Nous avons vu comment faire des url dynamique (index?name=test)
+

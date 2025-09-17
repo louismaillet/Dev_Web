@@ -1,11 +1,5 @@
-<!doctype html >
-<html>
-    <head>
-        <title>{{title}}</title>
-        <link rel="stylesheet" href="{{ url_for ('static', filename ='style.css') }}">
-    </head>
-    <body >
-        <h1>Contact</h1>
-        <p>Vous pouvez nous contacter au numero {{numero}} </p>
-    </body>
-</html >
+{% extends "base.html" %}
+{% block main %}
+    <h1>Caaaontact</h1>
+    <p>Vous pouvez nous contacter au numero {{numero}} </p>
+{% endblock %}

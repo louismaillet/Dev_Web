@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block main %}
+    <h1>Liste des auteurs</h1>
+    <p>Nombre d'auteurs : {{ auteurs|length }}</p>
+    {% if auteurs|length == 0 %}
+        <p>Aucun auteur trouvé.</p>
+    {% endif %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Nombre de livres</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for unAuteur in auteurs %}
+            <tr>
+                <td>{{ unAuteur.idA }}</td>
+                <td>{{ unAuteur.Nom }}</td>
+                <td>{{ unAuteur.livres.count() }}</td>
+                
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
