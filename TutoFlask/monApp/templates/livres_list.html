@@ -5,7 +5,7 @@
     {% if livres|length == 0 %}
         <p>Aucun livre trouvé.</p>
     {% endif %}
-    <table>
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th>ID</th>
@@ -13,6 +13,7 @@
                 <th>Prix</th>
                 <th>URL</th>
                 <th>Image</th>
+                <th> Auteur </th>
             </tr>
         </thead>
         <tbody>
@@ -21,10 +22,9 @@
                 <td>{{ unLivre.idL }}</td>
                 <td>{{ unLivre.Titre }}</td>
                 <td>{{ unLivre.Prix }}</td>
-                <td>{{unLivre.Url}}</td>
-                <td>{{ unLivre.Url }}</td>
-                
-                
+                <td><a href="{{ unLivre.Url }}">{{ unLivre.Url }}</a></td>
+                <td><img src="../static/image/{{ unLivre.Img }}" alt="l'image du livre" /></td>
+                <td>{{ unLivre.auteur.Nom }}</td>
             </tr>
             {% endfor %}
 
