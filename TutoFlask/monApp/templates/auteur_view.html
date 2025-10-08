@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h1>Consultation de l'auteur {{ selectedAuteur.Nom }}</h1>
+    <form role="form" method="POST" action="">
+        {{ viewForm.hidden_tag() }}
+        <div class="form-group mb-3">
+            {{ viewForm.Nom.label }}
+            {{ viewForm.Nom(size=50, disabled=True, class_="form-control") }}
+        </div>
+        <a href="{{ url_for('getAuteurs') }}" class="btn btn-secondary">Retour</a>
+    </form>
+{% endblock %}

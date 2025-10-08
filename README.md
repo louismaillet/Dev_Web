@@ -1,38 +1,66 @@
 # R3.01 DÉVELOPPEMENT WEB - Projet TutoFlask
 
-## Résumé premiere séance :
+## Résumé première séance
 
-- Création d’un environnement virtuel pour gérer les dépendances Python
 
-- Installation de Flask et configuration de l’application
+- Création d’un environnement virtuel pour gérer les dépendances Python sans conflit.
+- Installation de Flask et configuration de l’application.
+- Mise en place d’une architecture claire pour structurer le projet.
+- Création du fichier requirements.txt pour lister toutes les dépendances.
+- Premiers pas avec Flask et les routes, pour comprendre comment l’application répond aux requêtes.
+- Initiation à la création de pages web dynamiques en Python.
 
-- Mise en place d’une architecture claire pour structurer le projet
-
-- Apprentissage de la création d’un fichier requirements.txt pour les dépendances
-
-- Découverte du fonctionnement de Flask et des routes
-
-- Initiation à la création de pages web dynamiques en Python
+---
 
 ## Résumé deuxième séance :
 
-- Nous avons vu comment connecter une base de données à Flask à l’aide de SQLAlchemy.
 
-- Nous avons appris à créer des modèles Python représentant les tables de la base de données.
+- Nous avons vu comment connecter Flask à une base de données via SQLAlchemy.  
+- Nous avons créé des modèles Python représentant les tables de la base.  
+- Nous avons appris à peupler automatiquement la base à partir d’un fichier YAML.  
+- Nous avons utilisé Flask Shell pour afficher, récupérer, modifier et supprimer des données.  
 
-- Nous avons vu comment peupler la base de données automatiquement à partir d’un fichier YAML.
-
-- Nous avons utilisé Flask Shell pour afficher, récupérer, modifier et supprimer des données de la base.
+---
 
 ## Résumé troisième séance :
 
-- Nous avons vu comment mettre en relation une page html et css avec python et flask 
+
+- Nous avons vu comment mettre en relation une page HTML et CSS avec Python et Flask.  
+- Nous avons découvert la notion de template, un fichier HTML qui peut recevoir des variables depuis Python.  
+- Nous avons compris le rôle des vues (views.py) qui définissent le contenu renvoyé pour chaque URL.  
+
+---
 
 ## Résumé quatrième séance :
 
-- Nous avons vu comment afficher des images stockées dans un dossier static ( pas encore fini manque que a ajouter le lien et l'url)
+QCM 9.5/10 puis absent car problème de santé
 
-- Nous avons vu comment faire une base en html pour la reutiliser dans plusieurs pages ( base.html)
+---
 
-- Nous avons vu comment faire des url dynamique (index?name=test)
 
+## Résumé cinquième séance :
+
+- Nous avons vu comment afficher des images stockées dans le dossier static.  
+- Nous avons appris à créer un template de base base.html pour réutiliser une structure sur plusieurs pages.  
+- Nous avons vu comment mettre en place des URL dynamiques, comme index?name=test.  
+- Nous avons appris à créer des tableaux HTML avec des images, pratique pour lister des livres ou des auteurs.  
+- Nous avons appliqué Bootstrap et CSS pour améliorer la navigation, la mise en page et la présentation des tableaux.  
+
+## Résumé sixième séance :
+
+- Nous avons utilisé WTForms pour créer des formulaires sécurisés avec protection CSRF.  
+- Nous avons créé des formulaires pour ajouter, modifier, consulter et supprimer des auteurs (FormAuteur).  
+- Nous avons mis en place les vues correspondantes :  
+  - updateAuteur(idA) pour modifier un auteur  
+  - saveAuteur() pour sauvegarder les modifications  
+  - viewAuteur(idA) pour consulter un auteur  
+  - createAuteur() pour afficher le formulaire de création  
+  - insertAuteur() pour valider la création  
+  - deleteAuteur(idA) pour afficher la suppression  
+  - eraseAuteur() pour valider la suppression  
+
+- Puis en autonomie, nous avons créé des formulaires similaires pour les livres (FormLivre) et les vues associées :  
+  - updateLivre(idL)  
+  - saveLivre()  
+  - viewLivre(idL)
+  pour pouvoir mofidier le prix d'un livre   

@@ -5,11 +5,13 @@ class Auteur(db.Model):
 
     def __init__(self, Nom):
         self.Nom = Nom
-    
 
     def __repr__ (self ):
         return "<Auteur (%d) %s>" % (self.idA,self.Nom)
     
+    def getAuteursbyId(idA):
+        return Auteur.query.get(idA)
+
 class Livre(db.Model):
     idL = db.Column(db.Integer, primary_key=True)
     Prix = db.Column(db.Float)

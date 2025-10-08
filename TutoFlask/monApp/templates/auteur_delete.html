@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block main %}
+    <h1>Suppression de l'auteur {{ selectedAuteur.Nom }}. Etes vous sur ?</h1>
+    <form role="form" method="POST" action="{{ url_for('eraseAuteur') }}">
+        {{ deleteForm.hidden_tag() }}
+        <div class="form-group mb-3">
+            {{ deleteForm.Nom.label }}
+            {{ deleteForm.Nom(size=50, disabled=True, class_="form-control") }}
+        </div>
+        <input class="btn btn-danger" type="submit" value="Confirmer">
+        <a href="{{ url_for('getAuteurs') }}" class="btn btn-secondary">Retour</a>
+    </form>
+{% endblock %}
