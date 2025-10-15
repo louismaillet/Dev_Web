@@ -31,9 +31,11 @@
                         <a href="{{ url_for('viewLivre', idL=unLivre.idL) }}" class="btn btn-info">
                             Voir <i class="fas fa-eye"></i>
                         </a>
+                        {% if current_user.is_authenticated %}
                         <a href="{{ url_for('updateLivre', idL=unLivre.idL) }}" class="btn btn-warning">
                             Modifier <i class="fas fa-pen"></i>
                         </a>
+                        {% endif %}
 
                 </td>
             </tr>

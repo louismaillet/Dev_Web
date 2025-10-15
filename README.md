@@ -64,3 +64,17 @@ QCM 9.5/10 puis absent car problème de santé
   - saveLivre()  
   - viewLivre(idL)
   pour pouvoir mofidier le prix d'un livre   
+
+--- 
+
+## Résumé septième séance :
+
+- Fin du TP6 
+- Nous avons pu voir comment cree un utilisateur 
+- Nous avons cree le fait de s'authentifier avec des identifiant qu'on a pu cree et modifier 
+- Nous avons vu comment proteger des routes pour que seul les utilisateurs authentifiés puissent y accéder et que les autres soient redirigés vers la page de connexion
+- Nous avons aussi vu comment afficher les boutons modifier, creer, supprimer uniquement si l'utilisateur est connecté
+- Nous avons vu comment afficher le nom de l'utilisateur connecté dans la barre de navigation
+- Nous avons vu comment se deconnecter
+
+---

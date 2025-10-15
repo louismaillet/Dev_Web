@@ -1,2 +1,3 @@
-venv
+TutoFlask/.venv/
 *.pyc
+venv/

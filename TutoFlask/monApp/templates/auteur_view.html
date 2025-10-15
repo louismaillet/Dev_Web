@@ -8,6 +8,7 @@
             {{ viewForm.Nom.label }}
             {{ viewForm.Nom(size=50, disabled=True, class_="form-control") }}
         </div>
-        <a href="{{ url_for('getAuteurs') }}" class="btn btn-secondary">Retour</a>
+        
+        <a href="{{ url_for('getLivres') }}" class="btn btn-secondary">Retour</a>
     </form>
 {% endblock %}

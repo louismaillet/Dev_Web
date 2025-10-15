@@ -37,3 +37,42 @@ def loaddb(filename):
         db.session.add(objet)
     db.session.commit()
     lg.warning('Database initialized!')
+
+@app.cli.command()
+def syncdb():
+    '''Creates all missing tables.'''
+    db.create_all()
+    lg.warning('Database synchronized!')
+
+
+@app.cli.command()
+@click.argument('login')
+@click.argument('pwd')
+def newuser (login, pwd):
+    '''Adds a new user'''
+    from . models import User
+    from hashlib import sha256
+    m = sha256()
+    m.update(pwd.encode())
+    unUser = User(Login=login ,Password =m.hexdigest())
+    db.session.add(unUser)
+    db.session.commit()
+    lg.warning('User ' + login + ' created!')
+
+
+
+@app.cli.command()
+@click.argument('login')
+@click.argument('pwd')
+def newpasswrd(login, pwd):
+    from . models import User
+    from hashlib import sha256
+    unUser = User.query.get(login)
+    if unUser is None:
+        lg.warning('l"user' + login + ' n"existe pas!')
+    else:
+        m = sha256()
+        m.update(pwd.encode())
+        unUser.Password = m.hexdigest()
+        db.session.commit()
+        lg.warning('mdp ' + login + ' bien changé!')

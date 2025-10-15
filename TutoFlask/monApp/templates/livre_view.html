@@ -8,6 +8,14 @@
             {{ viewForm.Prix.label }}
             {{ viewForm.Prix(size=50, disabled=True, class_="form-control") }}
         </div>
+        <div class="form-group mb-3">
+            {{ viewForm.Titre.label }}
+            {{ viewForm.Titre(size=50, disabled=True, class_="form-control") }}
+        </div>
+        <div class="form-group mb-3">
+            {{ viewForm.Url.label }}
+            {{ viewForm.Url(size=50, disabled=True, class_="form-control") }}
+        </div>
         <a href="{{ url_for('getLivres') }}" class="btn btn-secondary">Retour</a>
     </form>
 {% endblock %}
