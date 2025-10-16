@@ -7,6 +7,7 @@
 3. Créer un environnement virtuel : `python -m venv venv`
 4. Activer l'environnement virtuel : `source venv/bin/activate`
 5. Installer les dépendances : `pip install -r requirements.txt`
+6. Mettre a jour la base de données : `flask loaddb monApp/data/data.yml`
 6. Lancer l'application : `flask run`
 7. Ouvrir un navigateur et aller à l'adresse : `http://127.0.0.1:5000`
 
