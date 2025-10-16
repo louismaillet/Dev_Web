@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, HiddenField, PasswordField
+from wtforms import StringField, HiddenField, PasswordField, SelectField
 from wtforms.validators import DataRequired
 from . models import User
 from hashlib import sha256
@@ -12,7 +12,7 @@ class FormLivre(FlaskForm):
     Prix = StringField('Prix', validators=[DataRequired()])
     Titre = StringField('Titre', validators=[DataRequired()])
     Url = StringField('Url')
-    Img = StringField('Img')
+    auteur_id = SelectField('Auteur', coerce=int)
 
 class LoginForm(FlaskForm):
     Login = StringField ('Identifiant')

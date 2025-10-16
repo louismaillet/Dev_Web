@@ -1,4 +1,14 @@
 # R3.01 DÉVELOPPEMENT WEB - Projet TutoFlask
+---
+## Comment lancer l'app :
+
+1. Cloner le dépôt GitHub : `git clone https://github.com/louismaillet/Dev_Web.git `
+2. Aller dans le dossier du projet : `cd Dev_Web/TutoFlask`
+3. Créer un environnement virtuel : `python -m venv venv`
+4. Activer l'environnement virtuel : `source venv/bin/activate`
+5. Installer les dépendances : `pip install -r requirements.txt`
+6. Lancer l'application : `flask run`
+7. Ouvrir un navigateur et aller à l'adresse : `http://127.0.0.1:5000`
 
 ## Résumé première séance
 
@@ -78,3 +88,14 @@ QCM 9.5/10 puis absent car problème de santé
 - Nous avons vu comment se deconnecter
 
 ---
+
+## Résumé final :
+
+- J'ai finis le projet j'ai pu ajouter la fonctionnalité de voir les livres d'un auteur en cliquant sur voir l'auteur 
+- J'ai aussi ajouté la fonctionnalité de modifier le prix, un titre, l'url et l'auteur en mettant un menu déroulant pour choisir l'auteur
+
+mon pourcentage de coverage est de 80% : 
+
+[![coverage](./screen_resultat_test.png)]
+
+je me suis arreté a 80% car le reste des tests sont presque identiques a ceux que j'ai fait.

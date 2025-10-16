@@ -1,28 +1,27 @@
 {% extends "base.html" %}
+
 {% block main %}
-    <h1>Modification du livre {{ selectedLivre.Prix }}</h1>
+    <h1>Modification du livre {{ selectedLivre.Titre }}</h1>
     <form role="form" method="POST" action="{{ url_for('saveLivre') }}">
         {{ updateForm.hidden_tag() }}
-        <div
-            {% if updateForm.Prix.errors %}
-                class="form-group has-error"
-            {% else %}
-                class="form-group mb-3"
-            {% endif %}
-        >
-            {{ updateForm.Prix.label }}
-            {{ updateForm.Prix(size=50, class_="form-control") }}
+        <div class="form-group mb-3">
+            {{ updateForm.Titre.label(class="form-label") }}
+            {{ updateForm.Titre(size=50, class="form-control") }}
+        </div>
+        <div class="form-group mb-3">
+            {{ updateForm.Prix.label(class="form-label") }}
+            {{ updateForm.Prix(size=50, class="form-control") }}
+        </div>
+        <div class="form-group mb-3">
+            {{ updateForm.Url.label(class="form-label") }}
+            {{ updateForm.Url(size=50, class="form-control") }}
+        </div>
+        <div class="form-group mb-3">
+            {{ updateForm.auteur_id.label(class="form-label") }}
+            {{ updateForm.auteur_id(class="form-select") }}
         </div>
 
-        {% if updateForm.Prix.errors %}
-            <ul class="list-group">
-                {% for e in updateForm.Prix.errors %}
-                    <li class="list-group-item list-group-item-danger">{{ e }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
-        <input class="btn btn-success" type="submit" value="Enregistrer">
-        <a href="{{ url_for('getLivres') }}" class="btn btn-secondary">Retour</a>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{{ url_for('getLivres') }}" class="btn btn-secondary">Annuler</a>
     </form>
 {% endblock %}

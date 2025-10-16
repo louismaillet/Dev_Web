@@ -1,6 +1,8 @@
 from . import db
 from flask_login import UserMixin
 from .app import login_manager
+from hashlib import sha256
+
 
 class Auteur(db.Model):
     idA = db.Column( db.Integer, primary_key=True )
@@ -38,11 +40,18 @@ class Livre(db.Model):
 class User(db.Model, UserMixin):
     Login = db.Column(db.String(50), primary_key=True)
     Password = db.Column(db.String(64))
+    
 
     def get_id(self):
         return self.Login
     
-
+    def __init__(self, Login, Password):
+        self.Login = Login
+        self.Password = Password
+        
+    def __repr__(self):
+        return f"<User ({self.Login})>"
+    
 @login_manager.user_loader
 def load_user(username):
-    return User.query.get(username)
+    return db.session.get(User, username)
